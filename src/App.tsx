@@ -29,13 +29,13 @@ export const App = () => {
 
   if (sortAlphbetically) {
     // eslint-disable-next-line max-len
-    visibleGoods = visibleGoods.sort((good1, good2) =>
+    visibleGoods = [...visibleGoods].sort((good1, good2) =>
       good1.localeCompare(good2),
     );
   }
 
   if (sortLength) {
-    visibleGoods = visibleGoods.sort(
+    visibleGoods = [...visibleGoods].sort(
       (good1, good2) => good1.length - good2.length,
     );
   }
